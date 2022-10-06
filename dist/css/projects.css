@@ -1,0 +1,320 @@
+#section2{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); 
+}
+#section2.dark{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000428); 
+}
+.projects{
+    height: 100%;
+}
+.projects__title{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.projects__catalog{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.projects__item{
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    color: black;
+    background: black;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 16px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+.projects__item:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+    box-shadow: 3px 3px 3px black;
+}
+.samkadastr{
+    background-image: url(../pics/project1.png);
+    max-height: 150px;
+    height: 150px;
+     max-width: 300px;
+    display: block;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hexletchat{
+    background-image: url(../pics/project2.png);
+    max-height: 150px;
+    height: 150px;
+     max-width: 300px;
+    display: block;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rssagregator{
+    background-image: url(../pics/project3.png);
+    max-height: 150px;
+    height: 150px;
+     max-width: 300px;
+    display: block;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.diffcalc{
+    background-image: url(../pics/project4.png);
+    max-height: 150px;
+    height: 150px;
+     max-width: 300px;
+    display: block;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.braingames{
+    background-image: url(../pics/project5.png);
+    max-height: 150px;
+    height: 150px;
+     max-width: 300px;
+    display: block;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: start;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+.modal-pages__item{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+    transition: 0.5s;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.modal-pages__content{
+    background: rgb(15, 24, 78);
+    max-width: 500px;
+    border-radius: 16px;
+}
+.modal-pages__header{
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+}
+.modal-pages__close{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 20px;
+}
+.modal-pages__body{
+    padding: 20px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.modal-pages__img{
+    margin:0 auto;
+
+    border-radius: 8px;
+}
+.modal-pages__title{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+.modal-pages__title h3{
+    font-size: 40px;
+}
+.modal-pages__description{
+    color: wheat;
+    background: #000428;
+    border-radius: 8px;
+    padding: 20px;
+}
+.modal-pages__skills{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.modal-pages__title{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+
+}
+
+
+.modal-pages__links{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.modal-pages__link-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   
+}
+ 
+.modal-pages__link-item:hover{
+    filter: drop-shadow(3px 3px 3px black);
+    transition: 0.1s;
+}
+
+
+.modal-pages__item--active{
+    transition: 0.5s;
+    visibility: visible ;
+    opacity: 1;
+}
+
+
+.modal-pages__close:hover{
+    color: white;
+    transition: 0.3s;
+    transform: rotate(-30deg);
+}
+
+
+
+@media (max-width: 657px) {
+    .projects{
+        padding-top: 10%;
+    }
+    .projects__title{
+        margin-top: 20%;
+        font-size: 1rem;
+    }
+    .projects__catalog{
+        margin-top: 5%;
+    }
+    .projects__item{
+        max-width: 250px;
+    }
+}
+@media (max-width: 575px) {
+    .projects__item{
+        max-width: 250px;
+    }
+    .projects__catalog{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .projects__catalog{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .projects__item{
+        max-height: 100px;
+       
+    }
+    .samkadastr{
+        max-height: 100px;
+        height: 100px;
+    }
+    .hexletchat{
+        max-height: 100px;
+        height: 100px;
+    }
+    
+    .rssagregator{
+        max-height: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 461px){
+    .projects__title{
+        margin-top: 30%;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 300px){
+    .projects__title{
+        margin-top: 40%;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal-pages__content{
+        height: 80%;
+        width: 80%;
+    }
+    .modal-pages__img{
+        width: 60%;
+    }
+    .modal-pages__title h3{
+        font-size: 20px;
+    }
+    .modal-pages__title{
+        padding: 15px 0px 15px 0px;
+    }
+    .modal-pages__title p{
+        font-size: 12px;
+    }
+    .modal-pages__description{
+        font-size: 12px;
+    }
+    .skills-item__text{
+        font-size: 12px;
+    }
+    .skills-item__picture img{
+        width: 40px;
+    }
+    .modal-pages__link-item img{
+        width: 25px;
+    }
+    .modal-pages__body{
+        padding: 10px 10px;
+        height: 90%;
+    }
+
+}
+
+@media (max-width:308px) {
+    .skills-item__text{
+        font-size: 9px;
+    }
+    .skills-item__picture img{
+        width: 30px;
+    }
+   
+}

@@ -1,0 +1,326 @@
+@import url(main.css);
+@import url(fullpage.css);
+@import url(about.css);
+@import url(projects.css);
+@import url(banana.css);
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    max-width: 1430px;
+    margin: auto;
+    padding: 10px 20px;
+}
+.header__logo img{
+    transition: 0.2s;
+    cursor: pointer;
+}
+.header__logo img:hover{
+    transition: 0.2s;
+    filter: drop-shadow(3px 3px 3px black);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: auto;
+}
+.header__burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    transition: 0.3s;
+    position: relative;
+}
+.header__burger:hover span:nth-child(1){
+    animation: burgeranimationFirst 1s infinite ease-in-out alternate forwards 300ms; 
+}
+.header__burger:hover span:nth-child(2){
+    animation: burgeranimationSecond 1s infinite ease-in-out alternate forwards 300ms; 
+}
+.header__burger--active:hover span:nth-child(1){
+    animation: none;
+    background: orangered;
+}
+.header__burger--active:hover span:nth-child(2){
+    animation: none;
+    background: orangered;
+}
+.header__burger span{
+    position: absolute;
+    right: 0;
+    margin: 7px;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    transition: 0.3s;
+}
+.header__burger span:nth-child(2){
+    top: 30%;
+}
+.header__burger span:nth-child(1){
+    top: 50%;
+}
+.header__burger--active span:nth-child(1){
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+.header__burger--active span:nth-child(2){
+    transform: rotate(45deg);
+    transition: 0.3s;
+    top: 50%;
+}
+
+.burger-menu{
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.burger-menu--active{
+    transform: translateY(0%);
+    transition: 0.3s;
+}
+.burger-menu h3{
+    color: white;
+}
+.burger-menu__link{
+    transition: 0.3s;
+}
+.burger-menu__link:hover{
+    filter: drop-shadow(3px 3px 3px rgb(63, 85, 11));
+    transition: 0.1s;
+    cursor: pointer;
+}
+.header__lang-menu{
+    margin-left: auto;
+    margin-right: 3%;
+    
+}
+.header__lang-menu:hover ul{
+    display: block;
+    position: absolute;
+    
+   
+}
+.header__lang-menu ul{
+    margin: 0;
+    padding: 0;
+    display: none;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.header__lang-menu ul li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.header__lang-selected li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.header__lang-selected li a {
+    text-decoration: none;
+    color: white;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.header__lang-selected li a:before{
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.header__lang-menu ul li a{
+    text-decoration: none;
+    color: white;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.header__lang-menu ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    
+}
+.header__lang-menu ul li a:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.header__lang-selected{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.eng:before{
+    background-image: url('/dist/pics/eng.png');
+}
+.ru:before{
+    background-image: url('/dist/pics/ru.png');
+}
+.header__theme-switcher{
+    margin-left:  3%;
+    
+}
+.header__theme-switcher label{
+    box-sizing: border-box;
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+}
+.header__theme-switcher input{
+    opacity: 0;
+    position: absolute;
+}
+.header__theme-switcher input:checked +.label .ball{
+    transform: translate(24px);
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
+}
+.ball{
+    position: absolute;
+    background-color: #fff;
+    width: 22px;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+@keyframes burgeranimationFirst {
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 50%;
+    }
+   100%{
+        width: 100%;
+    }
+}
+@keyframes burgeranimationSecond {
+    0%{
+        width: 50%;
+    }
+    50%{
+        width: 100%;
+    }
+   100%{
+        width: 50%;
+    }
+}
+.fullpage-wrapper {
+    width: 100%!important;
+    transform: none!important;
+}
+
+.fp-section {
+    width: 100%!important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.skills-item__text{
+    padding: 5px;
+    margin: 5px;
+    background: green;
+    border-radius: 7px;
+}
+.skills-item__picture img{
+    transition: 0.3s;
+}
+.skills-item__picture img:hover{
+    transition: 0.3s;
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: yellowgreen;
+}
+#preloader.hide-preloader {
+    animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+    display: none;
+}
+
+@keyframes hidePreloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:590px) {
+    .header__theme-switcher{
+        margin-left: 8%;
+    }
+}

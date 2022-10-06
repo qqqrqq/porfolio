@@ -1,0 +1,117 @@
+#section3{
+    background: #FF8008;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#section3.dark{
+    background: #FF8008;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.banana{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  
+}
+.banana canvas{
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+}
+.banana__body{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+   
+    width: 100%;
+    
+}
+.banana__body h2{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: rgb(240, 140, 10);
+    font-size: 4rem;
+}
+.banana__player{
+    height: 150px;
+    width: 150px;
+    margin-top: 3%;
+   
+    border-radius: 50%;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+.banana__one{
+    position: absolute;
+    top: 6%; 
+    left: 28%;
+    height: 70px;
+    width: 70px;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+.banana__one:hover{
+    font-size: 2.5rem;
+    transition: 0.3s;
+    right: 50%;
+}
+.banana__two{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 15%;
+    border-radius: 50px;
+    left: calc(50% - 3rem);
+    transition: 0.3s;
+}
+.banana__two:hover{
+    font-size: 2.5rem;
+    transition: 0.3s;
+}
+.banana__three{
+    position: absolute;
+    transition: 0.3s;
+    height: 40px;
+    width: 40px;
+    bottom: 15%;
+    left: calc(40% + 1.5rem);
+    border-radius: 50%;
+}
+.banana__three:hover{
+    font-size: 2.5rem;
+}
+.banana__player button{
+    border: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(204, 119, 7);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+.banana__content{
+    height: 100%;
+    width: 35%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+@media (max-width: 779px) {
+    .banana__content{
+        width: 100%;
+    }
+    .banana__body h2{
+        margin-bottom: 3%;
+    }
+}
