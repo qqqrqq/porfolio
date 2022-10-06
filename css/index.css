@@ -184,10 +184,10 @@ body{
 
 
 .eng:before{
-    background-image: url('/dist/pics/eng.png');
+    background-image: url('/portfolio/pics/eng.png');
 }
 .ru:before{
-    background-image: url('/dist/pics/ru.png');
+    background-image: url('/portfolio/pics/ru.png');
 }
 .header__theme-switcher{
     margin-left:  3%;
