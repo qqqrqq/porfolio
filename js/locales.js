@@ -28,8 +28,10 @@ const locales = {
         'eng':'stop'
     },
     'about-txt':{
-        'ru': 'Привет! Меня зовут Роман, мне 24 года. На данный момент я учусь на фронтенд разработчика. Мне нравится создавать всякие интересные вещи с помощью веб-технологий, сложные интерактивные интерфейсы и решать возможные проблемы пользователей. Здесь вы можете посмотреть мое портфолио. На данный момент я нахожусь в Самаре, я всегда открыт к новым проектам и предложениям. Мой основной стек: ',
-        'eng':'Hi! My name is Roman, I am 24 years old. At the moment I am studying to be a frontend developer. I like to create all sorts of interesting things using web technologies, complex interactive interfaces and solve possible user problems. Here you can see my portfolio. At the moment I am in Samara, I am always open to new projects and proposals. My main stack:'
+      /*  'ru': 'Привет! Меня зовут Роман, мне 24 года. На данный момент я учусь на фронтенд разработчика. Мне нравится создавать всякие интересные вещи с помощью веб-технологий, сложные интерактивные интерфейсы и решать возможные проблемы пользователей. Здесь вы можете посмотреть мое портфолио. На данный момент я нахожусь в Самаре, я всегда открыт к новым проектам и предложениям. Мой основной стек: ',*/
+      /*  'eng':'Hi! My name is Roman, I am 24 years old. At the moment I am studying to be a frontend developer. I like to create all sorts of interesting things using web technologies, complex interactive interfaces and solve possible user problems. Here you can see my portfolio. At the moment I am in Samara, I am always open to new projects and proposals. My main stack:'*/
+        'ru': 'Текст текст Текст текст Текст текст Текст текст Текст текст',
+        'eng': 'Text about Text about Text aboutText about Text about ',
     },
     'projects-samarakadastr-tittle':{
         'ru':'Самара кадастр',
